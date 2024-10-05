@@ -1,38 +1,67 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.vegetable-gallery {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gallery-title {
+  font-size: 2.5rem;
+  color: #4CAF50; /* Зелений колір */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тінь для заголовка */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.goods-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Збільшена тінь */
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.goods-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Тінь при наведенні */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.goods-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.goods-name {
+  font-size: 1.2rem;
+  color: #333;
+  padding: 10px;
+}
+
+.goods-price {
+  font-size: 1rem;
+  color: #4CAF50; /* Зелений колір для ціни */
+  padding: 0 10px 10px;
+  font-weight: bold; /* Текст жирний для кращої видимості */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Легка тінь для об'єму */
 }
